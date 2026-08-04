@@ -1,0 +1,64 @@
+﻿<html>
+<head> 
+  <title>Friends & Family</title>
+</head>
+<body bgcolor="#0b0e14">
+  <center>
+    <h1><font color="white">MY FRIENDS AND FAMILY</font></h1>
+    <h2><font color="white">Pick one from the drop-down menu so you can see each of them.</font></h2>
+    
+    <audio id="bg-music" src="friends.mp3" loop></audio>
+    
+    <label for="friends"></label>
+
+    <select name="friends" id="friends" style="background-color: #21262d; color: #ffffff; border: 1px solid #30363d; padding: 10px 15px; font-size: 16px; border-radius: 8px; cursor: pointer;" onchange="
+  var m = document.getElementById('bg-music');
+  m.loop = true;
+  m.volume = 0.1;
+  m.play();
+  var s = this.options[this.selectedIndex];
+  if (this.value) {
+    document.getElementById('friend-photo').src = this.value;
+    document.getElementById('friend-photo').style.display = 'block';
+    document.getElementById('friend-info').innerHTML = s.getAttribute('data-info');
+  }
+">
+      <option value="" disabled selected>-- PICK ONE TO SEE --</option>
+	 
+      <option value="Almar.jpg" data-info="This is my friend Almar.<br> His birthday is December 5, 2009. We first met in grade 6 and eventually became really close friends/partners in crime. <br> He claims himself to be 'POGI', and <br> we always support each other even if we are in different schools.">Almar</option>
+	  
+      <option value="EJ.jpg" data-info="EJ has been my girlfriend for over 1 year and 1 month, and counting! <br> She has always supported me and stayed by my side ever since we met. <br> Her birthday is really special because it's just one day apart from mine on September 12, 2010.">EJ</option>
+	  
+      <option value="emman.jpg" data-info="Emman is really special to me we became friends in grade 8 he helped me while I had a fractured feet he bought the foods for me thank you emman. And his Birthday is April 6, 2011.">Emman</option>
+	  
+      <option value="ezekiel.jpg" data-info="Ezekiel has been my friend since grade 2 he says I am really cool and has been my friend until now. His Birthday is March 27, 2010">Ezekiel</option>
+	  
+      <option value="ivan.jpg" data-info="Ivan has been my friend since grade 7 we always relate on grade because we always aspire to become honors we want to achive it together. His birthday is December 28, 2010  ">Ivan</option>
+	  
+      <option value="kairen.jpg" data-info="Kaireen has been my friend since ej and I met she is one of the bestfriend of Ej and she has been my friend eversince. Her Birthday is September 14, 2010 ">Kaireen</option>
+	  
+      <option value="lemuel.jpg" data-info="Lemuel has been my friend since grade 8 he likes Motorcycle and his mom bakes. And his birthday is April 26, 2011 ">Lemuel</option>
+	  
+      <option value="lex.jpg" data-info="Lex is my very very special friend because we met in grade 1 and we been friends eversince and still close to this day, I know his mother and he knows my mother too. His Birthday is May 3, 2011 ">Lex</option>
+	  
+      <option value="nuel.jpg" data-info="Nuel we met in grade 7 and he became my friend he likes basketball his mothers name is 'iris' his tita owns the ice cream shop in front of school. His birthday is January">Nuel</option>
+	  
+      <option value="lester.jpg" data-info="lester is my friend since I started in Concepcion Catholic school In Junior prep and we became friends eversince until now. His Birthday is November 22, 2010">Lester</option>
+	  
+	  <option value="pinsans.jpg" data-info="my pinsans the 2 na palaging kasama and they are the ones I am closes to and we always go to cafes. Missy is the youngest in us three and Ate Rea is the oldest">PINSANS</option>
+	  
+      <option value="others.jpg" data-info="This are all my friends who i have not mentioned because I have a lot of friends.">ALL OF THE ONES I DID NOT MENTION BECAUSE TOO MANY</option>
+    </select>
+
+    <br><br>
+    <img id="friend-photo" src="" alt="Friend's Picture" style="display: none; max-width: 300px;">
+
+    <font color="white">
+      <h2 id="friend-info">This is my barkads page I call it You can use the drop-down menu to see who they are. <br>
+      Welcome to this page! If you are my friend <br>
+      and you are not here or did not get mentioned, <br>
+      I just don't remember all of you I have too many friends and family!</h2>
+    </font>
+  </center>
+</body>
+</html>
